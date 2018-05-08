@@ -1,14 +1,3 @@
-
-var book = document.querySelector('li:first-child .name')
-
-book.getAttribute('class') //returns name
-book.setAttribute('class', ' name-2') //changes class to name-2
-book.hasAttribute('class') //returns true
-book.hasAttribute('href') //returns false
-book.removeAttribute('class') //removes class attribute
-book.setAttribute('class', 'name') //sets class attribute to 'name'
-
-
 const list = document.querySelector('#book-list ul');
 
 //delete books
@@ -50,6 +39,17 @@ addForm.addEventListener('submit', function(e){
   list.appendChild(li)
   
   
+});
+
+//hide books
+
+const hideBooks = document.querySelector('#hide');
+hideBooks.addEventListener('change', function(e){
+  if(hideBooks.checked){
+    list.style.display = 'none';
+  } else {
+    list.style.display = 'initial';
+  }
 });
 
 
