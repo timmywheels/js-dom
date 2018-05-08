@@ -1,9 +1,15 @@
-const books = document.querySelectorAll('#book-list li .name');
+const banner = document.querySelector('#page-banner');
 
-Array.from(books).forEach(function(book){
-    console.log(book.textContent += ' (Book title)');
-});
+//output node type
+console.log('#page-banner node type is:', banner.nodeType);
 
-const bookList = document.querySelector('#book-list');
-bookList.innerHTML = '<h2>Books and more books</h2>';
-bookList.innerHTML += '<p>This is how you add HTML</p>'
+//output node name
+console.log('#page-banner node name is:', banner.nodeName);
+
+//output if node has child nodes
+console.log('#page-banner has child nodes:', banner.hasChildNodes());
+
+const clonedBanner = banner.cloneNode(true);
+
+//output cloned banner element
+console.log(clonedBanner);
