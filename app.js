@@ -1,23 +1,13 @@
-//select page-banner section
-var banner = document.getElementById('page-banner');
+const wmf = document.querySelector('#book-list li:nth-child(2) .name');
+// console.log(wmf);
 
-//select book-list section
-var bookList = document.getElementById('book-list');
+//return single elements
+var books = document.querySelector('#book-list li .name');
+// console.log(books)
 
-//select all title class elements on page
-var titles = document.getElementsByClassName('title')
+//return all elements of this type
+books = document.querySelectorAll('#book-list li .name');
 
-//select all li's on page
-var lis = document.getElementsByTagName('li')
-
-//check if var titles is an array => returns false
-console.log(Array.isArray(titles))
-
-//convert var titles into an array => returns true
-console.log(Array.isArray(Array.from(titles)));
-
-//log each element in the titles array
-Array.from(titles).forEach(function(title){
-  console.log(title);
-});
-
+Array.from(books).forEach(function(book){
+    console.log(book);
+})
